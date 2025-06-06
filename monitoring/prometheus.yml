@@ -6,8 +6,9 @@ global:
  
  
 scrape_configs:
-  - job_name: "prometheus"
+  - job_name: "tf-serving"
     scrape_interval: 5s 
     metrics_path: /monitoring/prometheus/metrics 
+    scheme: https
     static_configs:
-      - targets: ['cc-prediction.herokuapp.com'] 
+      - targets: ['ml-ops-telco-production.up.railway.app']
